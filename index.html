@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FreeSoftIA crea software pratici e soluzioni digitali assistite dall'intelligenza artificiale.">
+  <meta name="theme-color" content="#071b2c">
+  <title>FreeSoftIA | Software e intelligenza artificiale</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23071b2c'/%3E%3Cpath d='M17 43V19h26M17 31h19' fill='none' stroke='%231fd4ff' stroke-width='6' stroke-linecap='round'/%3E%3Ccircle cx='45' cy='19' r='5' fill='%23ffc857'/%3E%3Ccircle cx='38' cy='31' r='5' fill='%231fd4ff'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #071b2c;
+      --ink-2: #0b263b;
+      --paper: #f5f9fc;
+      --muted: #a9bbca;
+      --cyan: #1fd4ff;
+      --blue: #2787ff;
+      --gold: #ffc857;
+      --line: rgba(255,255,255,.13);
+      --max: 1160px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--paper);
+      background:
+        radial-gradient(circle at 85% 8%, rgba(39,135,255,.22), transparent 31rem),
+        radial-gradient(circle at 12% 31%, rgba(31,212,255,.09), transparent 26rem),
+        var(--ink);
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .wrap { width: min(calc(100% - 40px), var(--max)); margin-inline: auto; }
+    header {
+      position: sticky; top: 0; z-index: 10;
+      backdrop-filter: blur(18px);
+      background: rgba(7,27,44,.78);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 22px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 800; font-size: 1.18rem; letter-spacing: -.02em; }
+    .mark { width: 39px; height: 39px; display: grid; place-items: center; border-radius: 11px; background: linear-gradient(145deg, #0b2c46, #0a2135); border: 1px solid rgba(31,212,255,.35); box-shadow: 0 8px 30px rgba(0,0,0,.2); }
+    .mark svg { width: 27px; height: 27px; }
+    .brand span span { color: var(--cyan); }
+    nav { display: flex; gap: 24px; align-items: center; }
+    nav a { color: #cfe0eb; text-decoration: none; font-size: .95rem; }
+    nav a:hover, nav a:focus-visible { color: var(--cyan); }
+    .hero { min-height: 680px; display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 72px; padding: 94px 0 80px; }
+    .eyebrow { color: var(--cyan); text-transform: uppercase; letter-spacing: .15em; font-weight: 750; font-size: .78rem; }
+    h1 { font-size: clamp(3rem, 7vw, 6.6rem); line-height: .94; letter-spacing: -.065em; margin: 18px 0 28px; max-width: 870px; }
+    h1 em { color: var(--cyan); font-style: normal; }
+    .lead { max-width: 660px; color: #c4d4df; font-size: clamp(1.08rem, 2vw, 1.3rem); }
+    .actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 35px; }
+    .button { display: inline-flex; justify-content: center; align-items: center; min-height: 50px; padding: 0 21px; border-radius: 10px; text-decoration: none; font-weight: 760; border: 1px solid transparent; }
+    .button.primary { color: #032035; background: var(--cyan); box-shadow: 0 12px 30px rgba(31,212,255,.18); }
+    .button.secondary { border-color: var(--line); background: rgba(255,255,255,.045); }
+    .button:hover { transform: translateY(-1px); }
+    .signal {
+      position: relative; min-height: 430px; display: grid; place-items: center;
+      border: 1px solid var(--line); border-radius: 32px;
+      background: linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.018));
+      overflow: hidden;
+    }
+    .signal::before { content: ""; position: absolute; width: 320px; height: 320px; border: 1px solid rgba(31,212,255,.28); border-radius: 50%; box-shadow: 0 0 0 54px rgba(31,212,255,.035), 0 0 0 108px rgba(39,135,255,.025); }
+    .ai-mark { position: relative; width: 180px; height: 180px; }
+    .ai-mark .node { position: absolute; width: 16px; height: 16px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 25px rgba(31,212,255,.65); }
+    .ai-mark .node.gold { background: var(--gold); box-shadow: 0 0 25px rgba(255,200,87,.55); }
+    .ai-mark i { position: absolute; height: 2px; background: linear-gradient(90deg, rgba(31,212,255,.2), var(--cyan)); transform-origin: left center; }
+    .n1 { left: 18px; top: 76px; } .n2 { right: 18px; top: 28px; } .n3 { right: 5px; bottom: 20px; } .n4 { left: 70px; bottom: 2px; } .n5 { left: 78px; top: 72px; }
+    .l1 { width: 77px; left: 31px; top: 82px; transform: rotate(-32deg); } .l2 { width: 73px; left: 91px; top: 78px; transform: rotate(-39deg); } .l3 { width: 79px; left: 91px; top: 87px; transform: rotate(42deg); } .l4 { width: 72px; left: 31px; top: 88px; transform: rotate(58deg); }
+    section { padding: 92px 0; }
+    .section-head { display: grid; grid-template-columns: .85fr 1.15fr; gap: 50px; align-items: end; margin-bottom: 42px; }
+    h2 { margin: 7px 0 0; font-size: clamp(2.15rem, 4vw, 4rem); line-height: 1; letter-spacing: -.045em; }
+    .section-head p { margin: 0; color: var(--muted); font-size: 1.08rem; }
+    .program { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--line); border-radius: 24px; overflow: hidden; background: rgba(255,255,255,.035); }
+    .program-main { padding: 42px; }
+    .status { display: inline-flex; align-items: center; gap: 8px; color: #c7d6e1; font-size: .88rem; }
+    .status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 15px rgba(255,200,87,.55); }
+    h3 { margin: 22px 0 12px; font-size: clamp(1.7rem, 3vw, 2.7rem); line-height: 1.08; }
+    .program-main p { color: var(--muted); }
+    .feature-list { padding: 42px; background: rgba(4,20,33,.46); display: grid; gap: 0; }
+    .feature { padding: 16px 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 32px 1fr; gap: 12px; }
+    .feature:last-child { border-bottom: 0; }
+    .feature b { color: var(--cyan); }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; counter-reset: steps; }
+    .step { counter-increment: steps; padding: 28px; min-height: 220px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.025); }
+    .step::before { content: "0" counter(steps); display: block; color: var(--cyan); font-size: .84rem; font-weight: 800; letter-spacing: .14em; margin-bottom: 34px; }
+    .step h3 { font-size: 1.25rem; margin: 0 0 9px; }
+    .step p { color: var(--muted); margin: 0; }
+    .contact { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 35px; padding: 46px; border-radius: 24px; color: #061d2e; background: linear-gradient(120deg, var(--cyan), #88e8ff); }
+    .contact h2 { margin: 0 0 12px; }
+    .contact p { margin: 0; max-width: 700px; }
+    .contact .button { color: var(--paper); background: var(--ink); white-space: nowrap; }
+    footer { border-top: 1px solid var(--line); padding: 31px 0 40px; color: #8da2b3; font-size: .88rem; }
+    .footer-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 30px; }
+    .legal { max-width: 710px; }
+    @media (max-width: 820px) {
+      nav a:not(.nav-contact) { display: none; }
+      .hero { grid-template-columns: 1fr; gap: 42px; padding-top: 70px; }
+      .signal { min-height: 330px; }
+      .section-head, .program { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; }
+      .step { min-height: 0; }
+      .contact { grid-template-columns: 1fr; padding: 32px; }
+      .contact .button { justify-self: start; }
+      .footer-row { flex-direction: column; }
+    }
+    @media (max-width: 480px) {
+      .wrap { width: min(calc(100% - 28px), var(--max)); }
+      .hero { min-height: auto; }
+      .program-main, .feature-list { padding: 27px; }
+      h1 { font-size: 3.25rem; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .button:hover { transform: none; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#inizio" aria-label="FreeSoftIA, torna all'inizio">
+        <span class="mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M8 31V9h24M8 20h18" fill="none" stroke="#1fd4ff" stroke-width="4" stroke-linecap="round"/><circle cx="32" cy="9" r="3.5" fill="#ffc857"/><circle cx="27" cy="20" r="3.5" fill="#1fd4ff"/></svg></span>
+        <span>FreeSoft<span>IA</span></span>
+      </a>
+      <nav aria-label="Navigazione principale">
+        <a href="#software">Software</a>
+        <a href="#attivazione">Attivazione</a>
+        <a class="nav-contact" href="mailto:supporto.freesoftia@gmail.com">Contatti</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inizio">
+    <div class="wrap hero">
+      <div>
+        <div class="eyebrow">Software pratico · intelligenza artificiale utile</div>
+        <h1>Ordine digitale.<br><em>Idee intelligenti.</em></h1>
+        <p class="lead">FreeSoftIA sviluppa strumenti chiari per organizzare documenti, dati e attività quotidiane. Tecnologia essenziale, controllo locale e attenzione alle persone che la utilizzano.</p>
+        <div class="actions">
+          <a class="button primary" href="#software">Scopri i programmi</a>
+          <a class="button secondary" href="mailto:supporto.freesoftia@gmail.com?subject=Informazioni%20FreeSoftIA">Scrivi al supporto</a>
+        </div>
+      </div>
+      <div class="signal" aria-hidden="true">
+        <div class="ai-mark">
+          <i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="l4"></i>
+          <span class="node n1"></span><span class="node gold n2"></span><span class="node n3"></span><span class="node gold n4"></span><span class="node n5"></span>
+        </div>
+      </div>
+    </div>
+
+    <section id="software">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">Primo progetto</div><h2>Software che risolve un lavoro reale.</h2></div>
+          <p>Applicazioni leggere, installate sul computer dell’utilizzatore e progettate per ridurre attività ripetitive senza complicare il lavoro.</p>
+        </div>
+        <article class="program">
+          <div class="program-main">
+            <span class="status">Versione di prova in preparazione</span>
+            <h3>Archivio Bollette Acqua</h3>
+            <p>Un archivio locale per importare bollette in PDF, ricercare rapidamente clienti e utenze, consultare lo storico e gestire stati e annotazioni.</p>
+            <a class="button secondary" href="mailto:supporto.freesoftia@gmail.com?subject=Informazioni%20Archivio%20Bollette%20Acqua">Richiedi informazioni</a>
+          </div>
+          <div class="feature-list" aria-label="Funzioni principali">
+            <div class="feature"><b>01</b><span>Ricerca per nominativo, bolletta, codice cliente, codice fiscale e indirizzo.</span></div>
+            <div class="feature"><b>02</b><span>Conservazione locale dei PDF e rilevazione automatica dei duplicati.</span></div>
+            <div class="feature"><b>03</b><span>Storico, stato della bolletta, note e gestione controllata delle anagrafiche.</span></div>
+            <div class="feature"><b>04</b><span>Nessuna telemetria e nessun accesso remoto nascosto.</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="attivazione">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">Licenze controllate</div><h2>Un codice per ogni computer.</h2></div>
+          <p>Ogni installazione definitiva sarà collegata alla singola postazione autorizzata. Una nuova installazione richiederà un nuovo codice.</p>
+        </div>
+        <div class="steps">
+          <article class="step"><h3>Installa la prova</h3><p>Il programma mostra l’identificativo univoco della postazione.</p></article>
+          <article class="step"><h3>Invia l’identificativo</h3><p>Comunicalo al supporto FreeSoftIA tramite l’indirizzo email ufficiale.</p></article>
+          <article class="step"><h3>Ricevi il codice</h3><p>Dopo l’autorizzazione viene generato un codice valido soltanto per quel computer.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap contact">
+        <div><h2>Hai una domanda?</h2><p>Per informazioni sui programmi, richieste di prova o attivazioni, contatta direttamente il supporto FreeSoftIA.</p></div>
+        <a class="button" href="mailto:supporto.freesoftia@gmail.com?subject=Richiesta%20assistenza%20FreeSoftIA">supporto.freesoftia@gmail.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <div><strong>FreeSoftIA</strong><br>Software e intelligenza artificiale</div>
+      <div class="legal">Il termine “Free” identifica la possibilità di concedere gratuitamente specifiche licenze. Non implica automaticamente la distribuzione del codice sorgente o una licenza open source. Questo sito non utilizza moduli, tracciamento o cookie di profilazione.</div>
+    </div>
+  </footer>
+</body>
+</html>
