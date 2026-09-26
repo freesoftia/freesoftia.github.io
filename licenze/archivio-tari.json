@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_utc": "2026-09-25T17:33:44.192Z",
+  "updated_utc": "2026-09-26T06:50:38.887Z",
   "licenses": {
     "3DA5E-53CFC-DA848-E30FA": {
       "status": "active",
@@ -10,6 +10,14 @@
       "updated_utc": "2026-09-25T17:33:42.610Z",
       "trial_start_utc": "2026-09-25T17:33:42.610Z",
       "trial_expires_utc": "2026-10-02T17:33:42.610Z"
+    },
+    "C300A-64B21-01700-7E653": {
+      "status": "active",
+      "license_type": "permanent",
+      "activation_sha256": "924099d016b0aef26db3ac61626dd881405396d790623284c6d45da4d18123b4",
+      "reason": "",
+      "updated_utc": "2026-09-26T06:50:38.415Z",
+      "activated_utc": "2026-09-26T06:50:38.415Z"
     }
   }
 }
