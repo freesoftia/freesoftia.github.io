@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_utc": "2026-09-26T06:50:38.887Z",
+  "updated_utc": "2026-10-02T11:55:16.201Z",
   "licenses": {
     "3DA5E-53CFC-DA848-E30FA": {
       "status": "active",
@@ -18,6 +18,15 @@
       "reason": "",
       "updated_utc": "2026-09-26T06:50:38.415Z",
       "activated_utc": "2026-09-26T06:50:38.415Z"
+    },
+    "TST26-SEP22-TARI1-PC001": {
+      "status": "active",
+      "license_type": "trial",
+      "activation_sha256": "15d5d1b14675d67d88ace65e8c76d77ffbaa7ca47659c929064febe7ffcc080f",
+      "reason": "",
+      "updated_utc": "2026-10-02T11:55:15.020Z",
+      "trial_start_utc": "2026-10-02T11:55:15.020Z",
+      "trial_expires_utc": "2026-10-09T11:55:15.020Z"
     }
   }
 }
