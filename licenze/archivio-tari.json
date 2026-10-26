@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_utc": "2026-10-26T13:37:30.647Z",
+  "updated_utc": "2026-10-26T16:48:04.692Z",
   "licenses": {
     "3DA5E-53CFC-DA848-E30FA": {
       "status": "suspended",
@@ -23,8 +23,8 @@
       "status": "suspended",
       "license_type": "trial",
       "activation_sha256": "15d5d1b14675d67d88ace65e8c76d77ffbaa7ca47659c929064febe7ffcc080f",
-      "reason": "Oltre tempo limite",
-      "updated_utc": "2026-10-26T13:37:30.317Z",
+      "reason": "",
+      "updated_utc": "2026-10-26T16:48:04.118Z",
       "trial_start_utc": "2026-10-02T11:55:15.020Z",
       "trial_expires_utc": "2026-10-09T11:55:15.020Z"
     }
